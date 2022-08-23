@@ -22,7 +22,6 @@ namespace NorthwindApp
         public virtual DbSet<CategorySalesFor1997> CategorySalesFor1997s { get; set; } = null!;
         public virtual DbSet<CurrentProductList> CurrentProductLists { get; set; } = null!;
         public virtual DbSet<Customer> Customers { get; set; } = null!;
-        public virtual DbSet<CustomerAndSuppliersByCity> CustomerAndSuppliersByCities { get; set; } = null!;
         public virtual DbSet<CustomerDemographic> CustomerDemographics { get; set; } = null!;
         public virtual DbSet<Employee> Employees { get; set; } = null!;
         public virtual DbSet<Invoice> Invoices { get; set; } = null!;
@@ -47,6 +46,7 @@ namespace NorthwindApp
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
